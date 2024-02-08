@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fde4ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.valentine-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.valentine-gif {
+  width: 80px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #d42e75;
+  margin-bottom: 3rem;
+}
+
+.buttons {
+  display: inline-block;
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #d42e75;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: 1rem;
+}
+
+.btn:hover {
+  background-color: #e84964;
+}
+
+.response {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #d42e75;
+}
+
+.hearts {
+  font-size: 2rem;
+  color: #e84964;
+  margin-top: 2rem;
+}
+
+.heart {
+  display: inline-block;
+  animation: heart-beat 1s infinite;
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+    color: #e84964;
+  }
+  25% {
+    transform: scale(1.2);
+    color: #fde4ec;
+  }
+  50% {
+    transform: scale(1);
+    color: #e84964;
+  }
+  100% {
+    transform: scale(1);
+    color: #e84964;
+  }
+}
+
+.fireworks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.firework {
+  position: absolute;
+  background-color: #e84964;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fireworksAnimation 2s ease-out;
+}
+
+@keyframes fireworksAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
+}
